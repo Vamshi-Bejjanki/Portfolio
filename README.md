@@ -58,10 +58,7 @@ However, feel free to fork it for inspiration or reach out if you'd like to coll
 
 ---
 
-## 📸 Screenshots
-> *(You can add screenshots here in the future to give a visual preview)*
 
----
 
 ## 📬 Contact
 Reach out via the website or through the following channels:
