@@ -1203,3 +1203,20 @@ section { padding: 100px 0; }
   border-radius: 20px;
 }
 
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo img {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.logo span {
+    font-weight: 600;
+    color: #fff;
+}
