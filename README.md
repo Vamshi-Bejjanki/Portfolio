@@ -18,7 +18,10 @@ The Personal Portfolio Website is a clean, modern, and fully responsive web port
 
 ```
 Portfolio/
-├── index.html               # Main HTML file
+├── assetd
+      ├── Images
+          ├── vamshi.jpg
+├── index.html             # Main HTML file
 ├── style.css        # Stylesheet
 ├── script.js            # JavaScript functionality
 └── README.md                # Project documentation
