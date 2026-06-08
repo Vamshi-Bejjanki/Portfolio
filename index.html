@@ -1,613 +1,592 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vamshi Bejjanki - Data Analyst & Web Developer</title>
-
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vamshi Bejjanki — Data Analyst & Web Developer</title>
+  <meta name="description" content="Portfolio of Vamshi Bejjanki — Data Analyst & Web Developer based in Hyderabad, India.">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-
 <body>
 
-<!-- ================= NAVBAR ================= -->
-<nav class="navbar">
-    <div class="nav-container">
-            <div class="nav-logo"><a href="#home" class="nav-link">VB</a></div>
-        <ul class="nav-menu">
-            <li><a href="#home" class="nav-link">Home</a></li>
-            <li><a href="#about" class="nav-link">About</a></li>
-            <li><a href="#projects" class="nav-link">Projects</a></li>
-            <li><a href="#Experience" class="nav-link">Experience</a></li>
-            <li><a href="#certifications" class="nav-link">Certifications</a></li>
-            <li><a href="#skills" class="nav-link">Skills</a></li>
-            <li><a href="#contact" class="nav-link">Contact</a></li>
-        </ul>
-        <div class="hamburger">
-            <span></span><span></span><span></span>
-        </div>
+
+
+<!-- ========== LOADER ========== -->
+<div class="page-loader" id="pageLoader">
+  <div class="loader-inner">
+    <span class="loader-name">VB</span>
+    <div class="loader-bar"><div class="loader-progress"></div></div>
+  </div>
+</div>
+
+<!-- ========== NAVBAR ========== -->
+<nav class="navbar" id="navbar">
+  <div class="nav-container">
+    <a href="#home" class="nav-logo">VB<span class="logo-dot"></span></a>
+    <ul class="nav-menu" id="navMenu">
+      <li><a href="#home" class="nav-link">Home</a></li>
+      <li><a href="#about" class="nav-link">About</a></li>
+      <li><a href="#projects" class="nav-link">Projects</a></li>
+      <li><a href="#experience" class="nav-link">Experience</a></li>
+      <li><a href="#certifications" class="nav-link">Certs</a></li>
+      <li><a href="#skills" class="nav-link">Skills</a></li>
+      <li><a href="#contact" class="nav-link">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+        <i class="fas fa-moon" id="themeIcon"></i>
+      </button>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
     </div>
+  </div>
 </nav>
 
-<!-- ================= HERO ================= -->
+<!-- ========== HERO ========== -->
 <section id="home" class="hero">
-    <div class="hero-content">
-        <div class="hero-text">
-            <h1 class="hero-name">Vamshi Bejjanki</h1>
-            <h2 class="hero-title">Web Developer & Data Analyst</h2>
-            <p class="hero-tagline">
-                Building data-driven and scalable web solutions with code and creativity
-            </p>
-            <div class="hero-buttons">
-                <a href="#projects" class="btn btn-primary">View My Work</a>
-                <a href="#contact" class="btn btn-outline">Get In Touch</a>
-            </div>
-        </div>
+  <div class="hero-bg">
+    <div class="grid-lines"></div>
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+  </div>
+  <div class="hero-content">
+    <div class="hero-badge">
+      <span class="badge-dot"></span>
+      <span>Open to opportunities</span>
     </div>
-    <div class="hero-background">
-  <div class="animated-bg"></div>
-</div>
+    <h1 class="hero-name">
+      <span class="name-line" data-text="Vamshi Bejjanki">Vamshi Bejjanki</span>
+      <!-- <span class="name-line italic" data-text="Bejjanki">Bejjanki</span> -->
+    </h1>
+    <p class="hero-role">
+      <span class="role-item active" data-role="0">Data Analyst</span>
+      <span class="role-divider">/</span>
+      <span class="role-item" data-role="1">Web Developer</span>
+      <span class="role-divider">/</span>
+      <span class="role-item" data-role="2">ML Enthusiast</span>
+    </p>
+    <p class="hero-tagline">Driven by curiosity, powered by data, and committed to creating meaningful solutions.</p>
+    <div class="hero-cta">
+      <a href="#projects" class="btn btn-primary">
+        <span>View My Work</span>
+        <i class="fas fa-arrow-right"></i>
+      </a>
+      <a href="#contact" class="btn btn-ghost">Get In Touch</a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat"><span class="stat-num">2+</span><span class="stat-label">Internships</span></div>
+      <div class="stat-divider"></div>
+      <div class="stat"><span class="stat-num">4+</span><span class="stat-label">Projects</span></div>
+      <div class="stat-divider"></div>
+      <div class="stat"><span class="stat-num">650+</span><span class="stat-label">Problems Solved</span></div>
+      <div class="stat-divider"></div>
+      <div class="stat"><span class="stat-num">8+</span><span class="stat-label">Certifications</span></div>
+    </div>
+  </div>
+  <div class="scroll-indicator">
+    <div class="scroll-line"></div>
+    <span>scroll</span>
+  </div>
 </section>
 
-<!-- ================= ABOUT ================= -->
-<section id="about" class="about">
-    <div class="container">
-        <h2 class="section-title">About Me</h2>
-        <div class="about-content">
-            <div class="about-image">
-                <div class="placeholder-image">
-                    <i class="fas fa-user"></i>
-                </div>
-            </div>
-            <div class="about-text">
-                <p>
-                    I’m Vamshi Bejjanki, a Computer Science (Data Science) undergraduate at
-                    Institute of Aeronautical Engineering, Hyderabad. I enjoy working at the
-                    intersection of web development and data analytics.
-                </p>
-                <p>
-                    I have hands-on experience building full-stack applications, dashboards,
-                    and data-driven platforms using Java, Python, JavaScript, SQL, and modern
-                    frameworks.
-                </p>
-
-                <div class="about-highlights">
-                    <div class="highlight"><h4>2+</h4><p>Internships</p></div>
-                    <div class="highlight"><h4>4+</h4><p>Projects</p></div>
-                    <div class="highlight"><h4>600+</h4><p>Problems Solved</p></div>
-                    <div class="highlight"><h4>8+</h4><p>Certifications</p></div>
-                </div>
-
-                <a href="https://drive.google.com/file/d/1YaYAMmU7bfw_tAXAxlq6q4RuoDMvXaMK/view?usp=drive_link" target="_blank" class="btn btn-secondary">
-                    <i class="fas fa-download"></i> View Resume
-                </a>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- ================= PROJECTS ================= -->
-<section id="projects" class="projects">
-        <div class="container">
-            <h2 class="section-title">Projects</h2>
-            <div class="projects-grid">
-              <a href="https://github.com/Vamshi-Bejjanki/Employee-Expense-Management-System"
-                target="_blank"
-                class="card-link">
-                <div class="project-card">
-                    <div class="project-header">
-                        <h3>Employee Expense Management System</h3>
-                    </div>
-                    <p class="project-description">Automated platform to manage employee expenses including voucher entry, multi-level workflow, and case tracking.</p>
-                    <div class="tech-stack">
-                        <span class="tech-tag">HTML</span>
-                        <span class="tech-tag">CSS</span>
-                        <span class="tech-tag">JavaScript</span>
-                        <span class="tech-tag">MySQL</span>
-                        <span class="tech-tag">Python</span>
-                    </div>
-                </div></a>
-
-                <a href="https://github.com/Vamshi-Bejjanki/Interactive-Web-App-for-Feature-Importance-Correlation-Analysis"
-                  target="_blank"
-                  class="card-link">
-                <div class="project-card">
-                    <div class="project-header">
-                        <h3>Data Correlation & Feature Importance</h3>
-                    </div>
-                    <p class="project-description">Interactive web app for analyzing data correlation and feature importance, integrating real-time visualizations for predictive modeling.</p>
-                    <div class="tech-stack">
-                        <span class="tech-tag">HTML</span>
-                        <span class="tech-tag">CSS</span>
-                        <span class="tech-tag">JavaScript</span>
-                        <span class="tech-tag">Python</span>
-                        <span class="tech-tag">Machine Learning</span>
-                    </div>
-                </div></a>
-
-                <a href="https://github.com/Vamshi-Bejjanki/TodoList"
-                  target="_blank"
-                  class="card-link">
-
-                  <div class="project-card">
-                    <div class="project-header">
-                      <h3>TodoList Web Application</h3>
-                    </div>
-
-                    <p class="project-description">
-                      Java-based task management web application with user authentication,
-                      CRUD operations for tasks, and persistent storage using MySQL,
-                      built using Servlets, JSP, and Maven architecture.
-                    </p>
-
-                    <div class="tech-stack">
-                      <span class="tech-tag">Java</span>
-                      <span class="tech-tag">JSP</span>
-                      <span class="tech-tag">Servlets</span>
-                      <span class="tech-tag">MySQL</span>
-                      <span class="tech-tag">Maven</span>
-                      <span class="tech-tag">Bootstrap</span>
-                    </div>
-                  </div>
-                </a>
-                <a href="https://github.com/Vamshi-Bejjanki/Student-Dashboard"
-                  target="_blank"
-                  class="card-link">
-
-                  <div class="project-card">
-                    <div class="project-header">
-                      <h3>Interactive Student Dashboard</h3>
-                    </div>
-
-                    <p class="project-description">
-                      Web-based analytics dashboard to visualize student performance and
-                      personality traits using interactive charts, leaderboards, and
-                      dynamic JSON-based data processing.
-                    </p>
-
-                    <div class="tech-stack">
-                      <span class="tech-tag">HTML</span>
-                      <span class="tech-tag">CSS</span>
-                      <span class="tech-tag">JavaScript</span>
-                      <span class="tech-tag">Plotly.js</span>
-                      <span class="tech-tag">JSON</span>
-                      <span class="tech-tag">Data Visualization</span>
-                    </div>
-                  </div>
-                </a>
-
-            </div>
-        </div>
-    </section>
-<!-- ================= INTERNSHIPS ================= -->
-<section id="Experience" class="Experience">
+<!-- ========== ABOUT ========== -->
+<section id="about" class="about section-reveal">
   <div class="container">
-    <h2 class="section-title">Experience</h2>
+    <div class="section-header">
+      <span class="section-tag">01 / About</span>
+      <h2 class="section-title">Who I Am</h2>
+    </div>
+    <div class="about-grid">
+      <div class="about-visual">
+        <div class="about-photo-frame">
+          <div class="photo-placeholder">
+            <img src="assets/images/vamshi.jpg" alt="Vamshi Bejjanki">
+          </div>
+          <div class="photo-deco deco-1"></div>
+          <div class="photo-deco deco-2"></div>
+        </div>
+        <div class="about-info-card">
+          <div class="info-row"><i class="fas fa-map-marker-alt"></i><span>Nizamabad, Telanaga, India</span></div>
+          <div class="info-row"><i class="fas fa-graduation-cap"></i><span>CSE (Data Science) @ IARE</span></div>
+          <div class="info-row"><i class="fas fa-briefcase"></i><span>Open to Work</span></div>
+        </div>
+      </div>
+      <div class="about-text">
+        <p class="about-lead">I'm a Computer Science undergraduate specialising in Data Science at the Institute of Aeronautical Engineering, Hyderabad. I enjoy working where web development meets data analytics.</p>
+        <p>With hands-on experience building full-stack applications, interactive dashboards, and data pipelines, I bring both engineering discipline and analytical thinking to every project. My stack spans Java, Python, JavaScript, SQL, and modern ML frameworks.</p>
+        <p>When I'm not coding, you'll find me grinding competitive programming platforms — I've solved 600+ problems across LeetCode, CodeChef, and HackerRank.</p>
+        <div class="about-actions">
+          <a href="https://drive.google.com/file/d/1AxTtJFMAbU-I3yjquAprzFHjl_-aRXM7/view?usp=sharing" target="_blank" class="btn btn-primary">
+            <i class="fas fa-file-pdf"></i>
+            <span>View Resume</span>
+          </a>
+          <div class="social-inline">
+            <a href="https://github.com/Vamshi-Bejjanki" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://linkedin.com/in/vamshi-bejjanki-091103vam/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
+<!-- ========== PROJECTS ========== -->
+<section id="projects" class="projects section-reveal">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">02 / Projects</span>
+      <h2 class="section-title">Selected Work</h2>
+    </div>
     <div class="projects-grid">
 
-      <!-- DeepThought Internship -->
-      <a href="https://drive.google.com/file/d/1So_Lh5Y9z46rMYYKEPC2L14DaQUEbSwK/view"
-         target="_blank"
-         class="card-link">
-
-        <div class="project-card">
-          <div class="project-header">
-            <h3>Data Analyst Intern – DeepThought</h3>
-          </div>
-
-          <p class="project-description">
-            Worked on real-world data analytics and automation workflows.
-            Designed dashboards, automated data tracking, and supported
-            data-driven decision-making across multiple teams.
-          </p>
-
-          <div class="tech-stack">
-            <span class="tech-tag">Data Analysis</span>
-            <span class="tech-tag">Python</span>
-            <span class="tech-tag">Pandas</span>
-            <span class="tech-tag">Goggle Sheets</span>
-            <span class="tech-tag">Dashboards</span>
-            <span class="tech-tag">Automation</span>
-            <span class="tech-tag">Leadership</span>
-            <span class="tech-tag">Teamwork</span>
-            <span class="tech-tag">KPI Tracking</span>
-          </div>
+      <a href="https://github.com/Vamshi-Bejjanki/Employee-Expense-Management-System" target="_blank" class="project-card">
+        <div class="project-num">01</div>
+        <div class="project-body">
+          <h3>Employee Expense Management System</h3>
+          <p>Automated platform to manage employee expenses with voucher entry, multi-level approval workflow, and real-time case tracking.</p>
         </div>
-
+        <div class="project-footer">
+          <div class="tech-stack">
+            <span>HTML</span><span>CSS</span><span>JavaScript</span><span>MySQL</span><span>Python</span>
+          </div>
+          <div class="project-arrow"><i class="fas fa-arrow-up-right-from-square"></i></div>
+        </div>
       </a>
 
-      <!-- Cognifyz Internship -->
-      <a href="https://drive.google.com/file/d/1vckZmE2Jxghju-K2YtBZd0YzyHKmX04Z/view"
-         target="_blank"
-         class="card-link">
-
-        <div class="project-card">
-          <div class="project-header">
-            <h3>Data Analyst Intern – Cognifyz Technologies</h3>
-          </div>
-
-          <p class="project-description">
-            Analyzed datasets to extract insights, performed data cleaning,
-            and created visual reports. Gained practical exposure to
-            analytics workflows and business-oriented data interpretation.
-          </p>
-
-          <div class="tech-stack">
-            <span class="tech-tag">Data Cleaning</span>
-            <span class="tech-tag">Python</span>
-            <span class="tech-tag">NumPy</span>
-            <span class="tech-tag">Pandas</span>
-            <span class="tech-tag">Data Visualization</span>
-          </div>
+      <a href="https://github.com/Vamshi-Bejjanki/Interactive-Web-App-for-Feature-Importance-Correlation-Analysis" target="_blank" class="project-card">
+        <div class="project-num">02</div>
+        <div class="project-body">
+          <h3>Data Correlation & Feature Importance</h3>
+          <p>Interactive web app for analysing data correlation and feature importance, integrating real-time visualisations for predictive modelling.</p>
         </div>
-
+        <div class="project-footer">
+          <div class="tech-stack">
+            <span>HTML</span><span>CSS</span><span>JavaScript</span><span>Python</span><span>ML</span>
+          </div>
+          <div class="project-arrow"><i class="fas fa-arrow-up-right-from-square"></i></div>
+        </div>
       </a>
 
-      <!-- Microsoft Learn Workshop -->
-      <a href="https://drive.google.com/file/d/1_iIuvdsKPGsWQp6n6gdaUBs14hi8z_Ob/view"
-         target="_blank"
-         class="card-link">
-
-        <div class="project-card">
-          <div class="project-header">
-            <h3>Web Development Trainee – Microsoft Learn Student Ambassador</h3>
-          </div>
-
-          <p class="project-description">
-            Completed hands-on web development training focused on building
-            responsive and interactive web pages using modern frontend
-            technologies and best practices.
-          </p>
-
-          <div class="tech-stack">
-            <span class="tech-tag">HTML</span>
-            <span class="tech-tag">CSS</span>
-            <span class="tech-tag">JavaScript</span>
-            <span class="tech-tag">Responsive Design</span>
-            <span class="tech-tag">Web Fundamentals</span>
-          </div>
+      <a href="https://github.com/Vamshi-Bejjanki/TodoList" target="_blank" class="project-card">
+        <div class="project-num">03</div>
+        <div class="project-body">
+          <h3>TodoList Web Application</h3>
+          <p>Java-based task management app with user authentication, CRUD operations, and persistent MySQL storage built on Servlets, JSP & Maven.</p>
         </div>
-
+        <div class="project-footer">
+          <div class="tech-stack">
+            <span>Java</span><span>JSP</span><span>Servlets</span><span>MySQL</span><span>Maven</span>
+          </div>
+          <div class="project-arrow"><i class="fas fa-arrow-up-right-from-square"></i></div>
+        </div>
       </a>
+
+      <a href="https://github.com/Vamshi-Bejjanki/Student-Dashboard" target="_blank" class="project-card">
+        <div class="project-num">04</div>
+        <div class="project-body">
+          <h3>Interactive Student Dashboard</h3>
+          <p>Analytics dashboard to visualise student performance and personality traits using interactive charts, leaderboards, and JSON-based data.</p>
+        </div>
+        <div class="project-footer">
+          <div class="tech-stack">
+            <span>HTML</span><span>CSS</span><span>JavaScript</span><span>Plotly.js</span><span>JSON</span>
+          </div>
+          <div class="project-arrow"><i class="fas fa-arrow-up-right-from-square"></i></div>
+        </div>
+      </a>
+
+      <!-- <a href="https://github.com/Vamshi-Bejjanki/Student-Dashboard" target="_blank" class="project-card">
+        <div class="project-num">04</div>
+        <div class="project-body">
+          <h3>Interactive Student Dashboard</h3>
+          <p>Analytics dashboard to visualise student performance and personality traits using interactive charts, leaderboards, and JSON-based data.</p>
+        </div>
+        <div class="project-footer">
+          <div class="tech-stack">
+            <span>HTML</span><span>CSS</span><span>JavaScript</span><span>Plotly.js</span><span>JSON</span>
+          </div>
+          <div class="project-arrow"><i class="fas fa-arrow-up-right-from-square"></i></div>
+        </div>
+      </a> -->
 
     </div>
   </div>
 </section>
 
-
-
-<!-- ================= CERTIFICATIONS ================= -->
-<section id="certifications" class="projects">
+<!-- ========== EXPERIENCE ========== -->
+<section id="experience" class="experience section-reveal">
   <div class="container">
-    <h2 class="section-title">Certifications</h2>
+    <div class="section-header">
+      <span class="section-tag">03 / Experience</span>
+      <h2 class="section-title">Where I've Worked</h2>
+    </div>
+    <div class="timeline">
 
-    <div class="projects-grid">
-
-      <!-- NPTEL DSA -->
-      <a href="https://drive.google.com/file/d/111oAQRZt3txIgbJkwQOwVZ-wS3m4XyZt/view?usp=drive_link"
-         target="_blank"
-         class="card-link">
-        <div class="project-card">
-          <div class="project-header">
-            <h3>Data Structures and Algorithms using Java – NPTEL</h3>
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-date">2024</div>
+        <a href="https://drive.google.com/file/d/1So_Lh5Y9z46rMYYKEPC2L14DaQUEbSwK/view" target="_blank" class="timeline-card">
+          <div class="timeline-header">
+            <div>
+              <h3>Data Analyst Intern</h3>
+              <span class="company">DeepThought</span>
+            </div>
+            <div class="cert-link"><i class="fas fa-external-link-alt"></i></div>
           </div>
+          <p>Designed dashboards, automated data tracking workflows, and supported data-driven decision-making across multiple teams with KPI monitoring.</p>
           <div class="tech-stack">
-            <span class="tech-tag">DSA</span>
-            <span class="tech-tag">Java</span>
-            <span class="tech-tag">Problem Solving</span>
+            <span>Python</span><span>Pandas</span><span>Google Sheets</span><span>Dashboards</span><span>Automation</span>
           </div>
-        </div>
-      </a>
+        </a>
+      </div>
 
-      <!-- Java Full Stack -->
-      <a href="https://drive.google.com/file/d/1b5zBgeNQBt3Gp9gn9O55k8xSRacVL078/view?usp=drive_link"
-         target="_blank"
-         class="card-link">
-        <div class="project-card">
-          <div class="project-header">
-            <h3>Java Full Stack Training – Wipro TalentNext</h3>
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-date">2024</div>
+        <a href="https://drive.google.com/file/d/1vckZmE2Jxghju-K2YtBZd0YzyHKmX04Z/view" target="_blank" class="timeline-card">
+          <div class="timeline-header">
+            <div>
+              <h3>Data Analyst Intern</h3>
+              <span class="company">Cognifyz Technologies</span>
+            </div>
+            <div class="cert-link"><i class="fas fa-external-link-alt"></i></div>
           </div>
+          <p>Analysed datasets to extract insights, performed data cleaning, and created visual reports with practical exposure to business-oriented analytics.</p>
           <div class="tech-stack">
-            <span class="tech-tag">Java</span>
-            <span class="tech-tag">Spring</span>
-            <span class="tech-tag">Web Development</span>
+            <span>Python</span><span>NumPy</span><span>Pandas</span><span>Data Visualisation</span>
           </div>
-        </div>
-      </a>
+        </a>
+      </div>
 
-      <!-- Data Science -->
-      <a href="https://drive.google.com/file/d/1Ngh0WERl-axXFbJmnD-XMffJNxOHOtJN/view?usp=drive_link"
-         target="_blank"
-         class="card-link">
-        <div class="project-card">
-          <div class="project-header">
-            <h3>Data Science using Python - NSIC</h3>
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-date">2023</div>
+        <a href="https://drive.google.com/file/d/1_iIuvdsKPGsWQp6n6gdaUBs14hi8z_Ob/view" target="_blank" class="timeline-card">
+          <div class="timeline-header">
+            <div>
+              <h3>Web Development Trainee</h3>
+              <span class="company">Microsoft Learn Student Ambassador</span>
+            </div>
+            <div class="cert-link"><i class="fas fa-external-link-alt"></i></div>
           </div>
+          <p>Completed hands-on training focused on building responsive and interactive web pages using modern frontend technologies and best practices.</p>
           <div class="tech-stack">
-            <span class="tech-tag">Python</span>
-            <span class="tech-tag">Pandas</span>
-            <span class="tech-tag">Machine Learning</span>
+            <span>HTML</span><span>CSS</span><span>JavaScript</span><span>Responsive Design</span>
           </div>
-        </div>
-      </a>
+        </a>
+      </div>
 
-      <!-- Pandas -->
-      <a href="https://drive.google.com/file/d/1L5mrZOELVXyWyOMHw6_3YVpIRkR6Q11Q/view?usp=drive_link"
-         target="_blank"
-         class="card-link">
-        <div class="project-card">
-          <div class="project-header">
-            <h3>Python Data Analysis with Pandas - Kaggle</h3>
-          </div>
-          <div class="tech-stack">
-            <span class="tech-tag">Pandas</span>
-            <span class="tech-tag">Data Analysis</span>
-            <span class="tech-tag">EDA</span>
-          </div>
-        </div>
-      </a>
-
-      <!-- Azure -->
-      <a href="https://drive.google.com/file/d/1hPH6Ye7R7GmCNGf6NsrTLYE1yL7WRup-/view?usp=drive_link"
-         target="_blank"
-         class="card-link">
-        <div class="project-card">
-          <div class="project-header">
-            <h3>Azure Fundamentals - Simplilearn(Microsoft)</h3>
-          </div>
-          <div class="tech-stack">
-            <span class="tech-tag">Azure Services</span>
-            <span class="tech-tag">Cloud Computing</span>
-            <span class="tech-tag">IaaS</span>
-            <span class="tech-tag">PaaS</span>
-            <span class="tech-tag">SaaS</span>
-          </div>
-        </div>
-      </a>
-
-      <!-- Cloud Computing -->
-      <a href="https://drive.google.com/file/d/1rY19t8WDoMzZwdZHI7VOUaPe1RNuV3-p/view?usp=drive_link"
-         target="_blank"
-         class="card-link">
-        <div class="project-card">
-          <div class="project-header">
-            <h3>Introduction to Cloud Computing - Simplilearn</h3>
-          </div>
-          <div class="tech-stack">
-            <span class="tech-tag">Cloud Computing</span>
-            <span class="tech-tag">Virtualization</span>
-            <span class="tech-tag">Networking</span>
-          </div>
-        </div>
-      </a>
-
-      <!-- Decision Trees -->
-      <a href="https://drive.google.com/file/d/1-9cs7ac2VwYMTmhXZYndk3bIjFHbwE4z/view?usp=drive_link"
-         target="_blank"
-         class="card-link">
-        <div class="project-card">
-          <div class="project-header">
-            <h3>Decision Trees using Python – Infosys</h3>
-          </div>
-          <div class="tech-stack">
-            <span class="tech-tag">Machine Learning</span>
-            <span class="tech-tag">Decision Trees</span>
-            <span class="tech-tag">Python</span>
-          </div>
-        </div>
-      </a>
-
-      <!-- AI Agents -->
-      <a href="https://drive.google.com/file/d/1guD489fHdyCjByihf3iWqaydy9q7BBdD/view?usp=drive_link"
-         target="_blank"
-         class="card-link">
-        <div class="project-card">
-          <div class="project-header">
-            <h3>AI Agents for Beginners - Simplilearn</h3>
-          </div>
-          <div class="tech-stack">
-            <span class="tech-tag">AI</span>
-            <span class="tech-tag">Agents</span>
-            <span class="tech-tag">Automation</span>
-            <span class="tech-tag">LLMS</span>
-            <span class="tech-tag">ML</span>
-          </div>
-        </div>
-      </a>
+      
 
     </div>
   </div>
 </section>
 
-
-
-<!-- ================= SKILLS ================= -->
-<section id="skills" class="skills">
+<!-- ========== CERTIFICATIONS ========== -->
+<section id="certifications" class="certifications section-reveal">
   <div class="container">
-    <h2 class="section-title">Skills & Technologies</h2>
+    <div class="section-header">
+      <span class="section-tag">04 / Certifications</span>
+      <h2 class="section-title">Credentials</h2>
+    </div>
+    <div class="certs-grid">
 
-    <!-- Languages -->
+      <a href="https://drive.google.com/file/d/111oAQRZt3txIgbJkwQOwVZ-wS3m4XyZt/view?usp=drive_link" target="_blank" class="cert-card">
+        <div class="cert-icon"><i class="fas fa-code"></i></div>
+        <div class="cert-info">
+          <h4>DSA using Java</h4>
+          <span>NPTEL</span>
+        </div>
+        <i class="fas fa-external-link-alt cert-ext"></i>
+      </a>
 
-    <div class="skill-category"><br>  
-      <h3>Languages</h3>
-      <div class="skills-grid">
-       
-        <div class="skill-item"><i class="fas fa-code"></i><span>Java</span></div>
-        <div class="skill-item"><i class="fas fa-code"></i><span>C</span></div>
-        <div class="skill-item"><i class="fab fa-python"></i><span>Python</span></div>
-        <div class="skill-item"><i class="fas fa-database"></i><span>SQL</span></div>
+      <a href="https://drive.google.com/file/d/1b5zBgeNQBt3Gp9gn9O55k8xSRacVL078/view?usp=drive_link" target="_blank" class="cert-card">
+        <div class="cert-icon"><i class="fab fa-java"></i></div>
+        <div class="cert-info">
+          <h4>Java Full Stack</h4>
+          <span>Wipro TalentNext</span>
+        </div>
+        <i class="fas fa-external-link-alt cert-ext"></i>
+      </a>
+
+      <a href="https://drive.google.com/file/d/1Ngh0WERl-axXFbJmnD-XMffJNxOHOtJN/view?usp=drive_link" target="_blank" class="cert-card">
+        <div class="cert-icon"><i class="fab fa-python"></i></div>
+        <div class="cert-info">
+          <h4>Data Science using Python</h4>
+          <span>NSIC</span>
+        </div>
+        <i class="fas fa-external-link-alt cert-ext"></i>
+      </a>
+
+      <a href="https://drive.google.com/file/d/1L5mrZOELVXyWyOMHw6_3YVpIRkR6Q11Q/view?usp=drive_link" target="_blank" class="cert-card">
+        <div class="cert-icon"><i class="fas fa-table"></i></div>
+        <div class="cert-info">
+          <h4>Python Data Analysis with Pandas</h4>
+          <span>Kaggle</span>
+        </div>
+        <i class="fas fa-external-link-alt cert-ext"></i>
+      </a>
+
+      <a href="https://drive.google.com/file/d/1hPH6Ye7R7GmCNGf6NsrTLYE1yL7WRup-/view?usp=drive_link" target="_blank" class="cert-card">
+        <div class="cert-icon"><i class="fab fa-microsoft"></i></div>
+        <div class="cert-info">
+          <h4>Azure Fundamentals</h4>
+          <span>Simplilearn (Microsoft)</span>
+        </div>
+        <i class="fas fa-external-link-alt cert-ext"></i>
+      </a>
+
+      <a href="https://drive.google.com/file/d/1rY19t8WDoMzZwdZHI7VOUaPe1RNuV3-p/view?usp=drive_link" target="_blank" class="cert-card">
+        <div class="cert-icon"><i class="fas fa-cloud"></i></div>
+        <div class="cert-info">
+          <h4>Intro to Cloud Computing</h4>
+          <span>Simplilearn</span>
+        </div>
+        <i class="fas fa-external-link-alt cert-ext"></i>
+      </a>
+
+      <a href="https://drive.google.com/file/d/1-9cs7ac2VwYMTmhXZYndk3bIjFHbwE4z/view?usp=drive_link" target="_blank" class="cert-card">
+        <div class="cert-icon"><i class="fas fa-brain"></i></div>
+        <div class="cert-info">
+          <h4>Decision Trees using Python</h4>
+          <span>Infosys</span>
+        </div>
+        <i class="fas fa-external-link-alt cert-ext"></i>
+      </a>
+
+      <a href="https://drive.google.com/file/d/1guD489fHdyCjByihf3iWqaydy9q7BBdD/view?usp=drive_link" target="_blank" class="cert-card">
+        <div class="cert-icon"><i class="fas fa-robot"></i></div>
+        <div class="cert-info">
+          <h4>AI Agents for Beginners</h4>
+          <span>Simplilearn</span>
+        </div>
+        <i class="fas fa-external-link-alt cert-ext"></i>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- ========== SKILLS ========== -->
+<section id="skills" class="skills section-reveal">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">05 / Skills</span>
+      <h2 class="section-title">Tech Stack</h2>
+    </div>
+
+    <div class="skills-wrapper">
+      <div class="skill-block">
+        <h3 class="skill-cat-title"><span>Languages</span></h3>
+        <div class="skill-pills">
+          <div class="skill-pill"><i class="fas fa-code"></i>Java</div>
+          <div class="skill-pill"><i class="fas fa-code"></i>C</div>
+          <div class="skill-pill"><i class="fab fa-python"></i>Python</div>
+          <div class="skill-pill"><i class="fas fa-database"></i>SQL</div>
+        </div>
+      </div>
+
+      <div class="skill-block">
+        <h3 class="skill-cat-title"><span>Web & Frontend</span></h3>
+        <div class="skill-pills">
+          <div class="skill-pill"><i class="fab fa-html5"></i>HTML</div>
+          <div class="skill-pill"><i class="fab fa-css3-alt"></i>CSS</div>
+          <div class="skill-pill"><i class="fab fa-js"></i>JavaScript</div>
+          <div class="skill-pill"><i class="fab fa-react"></i>React</div>
+        </div>
+      </div>
+
+      <div class="skill-block">
+        <h3 class="skill-cat-title"><span>Data & Libraries</span></h3>
+        <div class="skill-pills">
+          <div class="skill-pill">Pandas</div>
+          <div class="skill-pill">NumPy</div>
+          <div class="skill-pill">Matplotlib</div>
+          <div class="skill-pill">Seaborn</div>
+          <div class="skill-pill">Scikit-learn</div>
+        </div>
+      </div>
+
+      <div class="skill-block">
+        <h3 class="skill-cat-title"><span>Tools & Platforms</span></h3>
+        <div class="skill-pills">
+          <div class="skill-pill"><i class="fas fa-database"></i>MySQL</div>
+          <div class="skill-pill"><i class="fas fa-table"></i>Google Sheets</div>
+          <div class="skill-pill"><i class="fab fa-git-alt"></i>Git</div>
+          <div class="skill-pill"><i class="fab fa-github"></i>GitHub</div>
+        </div>
       </div>
     </div>
 
-    <!-- Web & Frontend -->
-    <div class="skill-category"><br>
-      <h3>Web & Frontend</h3>
-      <div class="skills-grid">
-        <div class="skill-item"><i class="fab fa-html5"></i><span>HTML</span></div>
-        <div class="skill-item"><i class="fab fa-css3-alt"></i><span>CSS</span></div>
-        <div class="skill-item"><i class="fab fa-js"></i><span>JavaScript</span></div>
-        <div class="skill-item"><i class="fab fa-react"></i><span>React</span></div>
+    <div class="competitive-row">
+      <h3 class="skill-cat-title"><span>Competitive Programming</span></h3>
+      <div class="competitive-cards">
+        <a href="https://leetcode.com/u/vamshi_bejjanki_/" target="_blank" class="comp-card">
+          <div class="comp-icon lc-icon">LC</div>
+          <div class="comp-info">
+            <strong>LeetCode</strong>
+            <span>170+ Problems</span>
+          </div>
+          <i class="fas fa-external-link-alt"></i>
+        </a>
+        <a href="https://www.codechef.com/users/bejjankivamshi" target="_blank" class="comp-card">
+          <div class="comp-icon cc-icon">CC</div>
+          <div class="comp-info">
+            <strong>CodeChef</strong>
+            <span>420+ Problems</span>
+          </div>
+          <i class="fas fa-external-link-alt"></i>
+        </a>
+        <a href="https://www.hackerrank.com/profile/vamshibejjanki" target="_blank" class="comp-card">
+          <div class="comp-icon hr-icon">HR</div>
+          <div class="comp-info">
+            <strong>HackerRank</strong>
+            <span>449 Hackos</span>
+          </div>
+          <i class="fas fa-external-link-alt"></i>
+        </a>
       </div>
-    </div>
-
-    <!-- Libraries -->
-    <div class="skill-category"><br>
-      <h3>Libraries</h3>
-      <div class="skills-grid">
-        <div class="skill-item"><span>Pandas</span></div>
-        <div class="skill-item"><span>NumPy</span></div>
-        <div class="skill-item"><span>Matplotlib</span></div>
-        <div class="skill-item"><span>Seaborn</span></div>
-        <div class="skill-item"><span>Scikit-learn</span></div>
-      </div>
-    </div>
-
-    <!-- Data & Tools -->
-    <div class="skill-category">
-      <br>
-      <h3>Data & Tools</h3>
-      <div class="skills-grid">
-        <div class="skill-item"><i class="fas fa-database"></i><span>MySQL</span></div>
-        <div class="skill-item"><i class="fas fa-table"></i><span>Google Sheets</span></div>
-        <div class="skill-item"><i class="fab fa-git-alt"></i><span>Git</span></div>
-        <div class="skill-item"><i class="fab fa-github"></i><span>GitHub</span></div>
-      </div>
-    </div>
-
-    <!-- ================= PROBLEM SOLVING ================= -->
-
-    <div class="skill-category">
-      <br>
-      <h3>Problem Solving</h3>
-      <div class="skills-grid">
-
-        <!-- LeetCode -->
-          <a href="https://leetcode.com/u/vamshi_bejjanki_/"
-         target="_blank"
-         class="card-link">
-        <div class="skill-item">
-          <i class="fas fa-code"></i>
-          <span>
-            LeetCode<br>
-            170+ Problems
-          </span>
-        </div></a>
-
-        <!-- CodeChef -->
-          <a href="https://www.codechef.com/users/bejjankivamshi"
-         target="_blank"
-         class="card-link">
-        <div class="skill-item">
-          <i class="fas fa-laptop-code"></i>
-          <span>
-            CodeChef<br>
-            420+ Problems
-          </span>
-        </div></a>
-
-        <!-- HackerRank -->
-          <a href="https://www.hackerrank.com/profile/vamshibejjanki"
-         target="_blank"
-         class="card-link">
-        <div class="skill-item">
-          <i class="fab fa-hackerrank"></i>
-          <span>
-            HackerRank<br>
-            449 Hackos
-          </span>
-        </div></a>
-
-      </div>
-
     </div>
 
   </div>
 </section>
 
+<!-- ========== CONTACT ========== -->
+<section id="contact" class="contact section-reveal">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">06 / Contact</span>
+      <h2 class="section-title">Let's Connect</h2>
+      <p class="section-sub">Open to full-time roles, internships, and interesting collaborations.</p>
+    </div>
+    <div class="contact-grid">
 
-<!-- ================= CONTACT ================= -->
-<section id="contact" class="contact">
-        <div class="container">
-            <h2 class="section-title">Get In Touch</h2>
-            <div class="contact-content">
-                <div class="contact-info">
-                    <h3>Let's connect</h3>
-                    <p>Open to opportunities and collaborations. Feel free to contact me through the form or social links.</p>
-                    <div class="contact-details">
-                        <div class="contact-item">
-                            <i class="fas fa-envelope"></i>
-                            <span>vamshibejjanki09@gmail.com</span>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <span>Hyderabad, India</span>
-                        </div>
-                            <div class="contact-item">
-                                <i class="fas fa-phone-alt"></i>
-                                <span>+91 9398376738</span>
-                            </div>
-                    </div>
-                </div>
-            
-                <form action="https://formspree.io/f/xnnvaerp" method="POST" class="contact-form" id="contactForm">
-                    <div class="form-group">
-                        <input type="text" id="name" name="name" class="form-control" placeholder="Your Name" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="email" id="email" name="_replyto" class="form-control" placeholder="Your Email" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="text" id="subject" name="subject" class="form-control" placeholder="Subject">
-                    </div>
-                    <div class="form-group">
-                        <textarea id="message" name="message" class="form-control" rows="5" placeholder="Your Message" required></textarea>
-                    </div>
-                    <input type="text" name="_gotcha" style="display:none">
-                    <input type="hidden" name="_next" value="https://vamshi-bejjanki.github.io/Portfolio/thankyou.html">
-                    <button type="submit" class="btn btn-primary btn-full-width">
-                        <i class="fas fa-paper-plane"></i>
-                        Send Message
-                    </button>
-                    <div id="formMessage" class="form-message" style="margin-top: 10px; color: green;"></div>
-                </form>
-
-                
-
+      <div class="contact-left">
+        <div class="contact-info-block">
+          <a href="mailto:vamshibejjanki09@gmail.com" class="contact-info-item">
+            <div class="ci-icon"><i class="fas fa-envelope"></i></div>
+            <div class="ci-text">
+              <span class="ci-label">Email</span>
+              <span class="ci-value">vamshibejjanki09@gmail.com</span>
             </div>
+          </a>
+          <div class="contact-info-item">
+            <div class="ci-icon"><i class="fas fa-phone"></i></div>
+            <div class="ci-text">
+              <span class="ci-label">Phone</span>
+              <span class="ci-value">+91 9398376738</span>
+            </div>
+          </div>
+          <div class="contact-info-item">
+            <div class="ci-icon"><i class="fas fa-map-marker-alt"></i></div>
+            <div class="ci-text">
+              <span class="ci-label">Location</span>
+              <span class="ci-value">Nizamabad, Telangana, India</span>
+            </div>
+          </div>
         </div>
-    </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-text">
-                    <p>&copy; 2025 Vamshi Bejjanki. All rights reserved.</p>
-                </div>
-                <div class="social-links">
-                    <a href="https://github.com/Vamshi-Bejjanki" target="_blank" title="GitHub">
-                        <i class="fab fa-github"></i>
-                    </a>
-                    <a href="https://linkedin.com/in/vamshi-bejjanki-091103vam/" target="_blank" title="LinkedIn">
-                        <i class="fab fa-linkedin"></i>
-                    </a>
-                    <a href="https://leetcode.com/u/vamshi_bejjanki_/" target="_blank" title="LeetCode">
-                        <i class="fas fa-code"></i>
-                    </a>
-                    <a href="mailto:vamshibejjanki09@gmail.com" title="Email">
-                        <i class="fas fa-envelope"></i>
-                    </a>
-                </div>
-            </div>
-            <div class="back-to-top" id="backToTop">
-                <i class="fas fa-chevron-up"></i>
-            </div>
+        <div class="contact-social">
+          <a href="https://github.com/Vamshi-Bejjanki" target="_blank" class="social-btn">
+            <i class="fab fa-github"></i><span>GitHub</span>
+          </a>
+          <a href="https://linkedin.com/in/vamshi-bejjanki-091103vam/" target="_blank" class="social-btn">
+            <i class="fab fa-linkedin"></i><span>LinkedIn</span>
+          </a>
+          <a href="https://leetcode.com/u/vamshi_bejjanki_/" target="_blank" class="social-btn">
+            <i class="fas fa-code"></i><span>LeetCode</span>
+          </a>
         </div>
-    </footer>
 
-    <script src="app.js"></script>
+        <div class="availability-badge">
+          <div class="avail-dot"></div>
+          <div>
+            <strong>Available for work</strong>
+            <p>Typically reply within 24 hours</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- CONTACT FORM — powered by Formspree -->
+      <div class="contact-right">
+        <form id="contactForm" class="contact-form" action="https://formspree.io/f/xnnvaerp" method="POST" novalidate>
+          <!-- Honeypot spam filter -->
+          <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+          <!-- Redirect after success -->
+          <input type="hidden" name="_next" value="https://vamshi-bejjanki.github.io/Portfolio/#contact">
+          <!-- Subject prefix -->
+          <input type="hidden" name="_subject" value="Portfolio Contact: New Message">
+
+          <div class="form-row">
+            <div class="form-field">
+              <label for="name">Your Name <span class="req">*</span></label>
+              <input type="text" id="name" name="name" placeholder="e.g. Rahul Sharma" autocomplete="name" required>
+              <span class="field-error" id="nameError"></span>
+            </div>
+            <div class="form-field">
+              <label for="email">Email Address <span class="req">*</span></label>
+              <input type="email" id="email" name="_replyto" placeholder="you@example.com" autocomplete="email" required>
+              <span class="field-error" id="emailError"></span>
+            </div>
+          </div>
+
+          <div class="form-field">
+            <label for="subject">Subject <span class="req">*</span></label>
+            <input type="text" id="subject" name="subject" placeholder="e.g. Full-time Opportunity at XYZ" required>
+            <span class="field-error" id="subjectError"></span>
+          </div>
+
+          <div class="form-field">
+            <label for="message">Message <span class="req">*</span></label>
+            <textarea id="message" name="message" rows="5" placeholder="Tell me about your project, role, or idea…" required></textarea>
+            <span class="field-error" id="messageError"></span>
+          </div>
+
+          <div class="form-bottom">
+            <button type="submit" class="btn btn-primary btn-submit" id="submitBtn">
+              <span id="btnText"><i class="fas fa-paper-plane"></i> Send Message</span>
+              <span id="btnLoading" style="display:none"><i class="fas fa-spinner fa-spin"></i> Sending…</span>
+            </button>
+            <p class="form-note">Your message is sent directly to my email — no spam, ever.</p>
+          </div>
+
+          <div id="formStatus" class="form-status" role="alert"></div>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ========== FOOTER ========== -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-left">
+        <span class="footer-logo">VB<span class="logo-dot">.</span></span>
+        <p>Built with ♥ by Vamshi</p>
+      </div>
+      <p class="footer-copy">© 2025 Vamshi Bejjanki. All rights reserved.</p>
+      <div class="footer-social">
+        <a href="https://github.com/Vamshi-Bejjanki" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://linkedin.com/in/vamshi-bejjanki-091103vam/" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="mailto:vamshibejjanki09@gmail.com"><i class="fas fa-envelope"></i></a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ========== BACK TO TOP ========== -->
+<button class="back-to-top" id="backToTop" aria-label="Back to top">
+  <i class="fas fa-chevron-up"></i>
+</button>
+
+<script src="app.js"></script>
 </body>
 </html>
