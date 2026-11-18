@@ -1,0 +1,251 @@
+@import "tailwindcss";
+
+/* ------------------------------------------------------------
+   Theme tokens. Colours are CSS variables so every component
+   follows the active theme. Dark is the default; light is its
+   own palette (not an inversion). Values set on :root below.
+------------------------------------------------------------ */
+@theme {
+  --color-bg: var(--bg);
+  --color-bg-2: var(--bg-2);
+  --color-card: var(--card);
+  --color-primary: var(--primary);
+  --color-electric: var(--electric);
+  --color-sky: var(--sky);
+  --color-text: var(--text);
+  --color-text-2: var(--text-2);
+  --color-muted: var(--muted);
+
+  --font-sans: "Inter", "Geist", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --ease-smooth: cubic-bezier(0.22, 0.7, 0.2, 1);
+}
+
+/* Dark theme (default) */
+:root {
+  --bg: #050816;
+  --bg-2: #080f20;
+  --card: #0d172b;
+  --glass: rgba(13, 23, 43, 0.78);
+  --glass-strong: rgba(13, 23, 43, 0.9);
+  --primary: #2563eb;
+  --electric: #008cff;
+  --sky: #00b7ff;
+  --accent-text: #60a5fa;
+  --text: #f8fafc;
+  --text-2: #a8b7cf;
+  --muted: #718096;
+  --border: rgba(96, 165, 250, 0.2);
+  --shadow: rgba(0, 0, 0, 0.35);
+  --grid: rgba(96, 165, 250, 0.06);
+  --orb: rgba(37, 99, 235, 0.22);
+  --orb-2: rgba(0, 183, 255, 0.14);
+  color-scheme: dark;
+}
+
+/* Light theme: soft white / light grey, dark navy type, same blue */
+[data-theme="light"] {
+  --bg: #f3f6fc;
+  --bg-2: #e9effa;
+  --card: #ffffff;
+  --glass: rgba(255, 255, 255, 0.74);
+  --glass-strong: rgba(255, 255, 255, 0.9);
+  --primary: #2563eb;
+  --electric: #0b6fe0;
+  --sky: #0a6fd6;
+  --accent-text: #1d4ed8;
+  --text: #0b1220;
+  --text-2: #3b4a63;
+  --muted: #5b6b82;
+  --border: rgba(37, 99, 235, 0.2);
+  --shadow: rgba(30, 58, 138, 0.14);
+  --grid: rgba(37, 99, 235, 0.07);
+  --orb: rgba(37, 99, 235, 0.14);
+  --orb-2: rgba(0, 140, 255, 0.1);
+  color-scheme: light;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    background-color: var(--bg);
+    -webkit-text-size-adjust: 100%;
+    overflow-x: clip;
+  }
+
+  body {
+    background-color: var(--bg);
+    color: var(--text);
+    font-family: var(--font-sans);
+    font-size: 16px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: clip;
+  }
+
+  /* Briefly enabled while switching theme so colours fade together */
+  html.theme-switching,
+  html.theme-switching * {
+    transition: background-color 400ms ease, color 400ms ease, border-color 400ms ease, box-shadow 400ms ease !important;
+  }
+
+  ::selection {
+    background-color: rgba(37, 99, 235, 0.45);
+    color: var(--text);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--sky);
+    outline-offset: 3px;
+    border-radius: 8px;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+@layer components {
+  /* Glass surfaces */
+  .glass {
+    background: var(--glass);
+    -webkit-backdrop-filter: blur(16px);
+    backdrop-filter: blur(16px);
+    border: 1px solid var(--border);
+    box-shadow: 0 8px 32px var(--shadow);
+  }
+
+  .glass-strong {
+    background: var(--glass-strong);
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
+    border: 1px solid var(--border);
+    box-shadow: 0 12px 40px var(--shadow);
+  }
+
+  /* Headline highlight: linear-gradient(90deg, #2563EB, #00B7FF) */
+  .text-gradient {
+    background: linear-gradient(90deg, #2563eb, #00b7ff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  /* Buttons: linear-gradient(135deg, #2563EB, #008CFF) */
+  .btn-primary {
+    background: linear-gradient(135deg, #2563eb, #008cff);
+    color: #ffffff;
+    box-shadow: 0 6px 20px rgba(37, 99, 235, 0.3);
+    transition: transform 250ms var(--ease-smooth), box-shadow 250ms var(--ease-smooth), filter 250ms var(--ease-smooth);
+  }
+  .btn-primary:hover {
+    filter: brightness(1.1);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(0, 140, 255, 0.45);
+  }
+  .btn-primary:disabled {
+    filter: grayscale(0.4) brightness(0.9);
+    transform: none;
+    cursor: not-allowed;
+  }
+
+  .btn-ghost {
+    background: var(--glass);
+    -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(12px);
+    border: 1px solid var(--border);
+    color: var(--text);
+    transition: transform 250ms var(--ease-smooth), border-color 250ms var(--ease-smooth), box-shadow 250ms var(--ease-smooth), color 250ms var(--ease-smooth);
+  }
+  .btn-ghost:hover {
+    transform: translateY(-2px);
+    border-color: rgba(0, 140, 255, 0.6);
+    box-shadow: 0 0 24px rgba(0, 140, 255, 0.2);
+    color: var(--sky);
+  }
+
+  /* Technology chips */
+  .tag {
+    background: var(--card);
+    border: 1px solid var(--border);
+    color: var(--text-2);
+    transition: border-color 250ms var(--ease-smooth), color 250ms var(--ease-smooth), background-color 250ms var(--ease-smooth);
+  }
+  .tag:hover {
+    border-color: rgba(0, 140, 255, 0.6);
+    color: var(--text);
+  }
+
+  /* Static ambient radial lighting (backup for reduced motion) */
+  .ambient {
+    background-image:
+      radial-gradient(circle at 12% 8%, var(--orb), transparent 60%),
+      radial-gradient(circle at 88% 30%, var(--orb-2), transparent 55%);
+  }
+
+  .grid-pattern {
+    background-image:
+      linear-gradient(var(--grid) 1px, transparent 1px),
+      linear-gradient(90deg, var(--grid) 1px, transparent 1px);
+    background-size: 64px 64px;
+    -webkit-mask-image: radial-gradient(ellipse at 50% 20%, #000 20%, transparent 75%);
+    mask-image: radial-gradient(ellipse at 50% 20%, #000 20%, transparent 75%);
+  }
+
+  .glow-ring {
+    box-shadow: 0 0 0 1px rgba(0, 140, 255, 0.45), 0 0 48px rgba(37, 99, 235, 0.35);
+  }
+}
+
+/* ------------------------------------------------------------
+   Live background: lightweight CSS keyframes (no video, no canvas)
+------------------------------------------------------------ */
+@keyframes orb-drift-a {
+  0%, 100% { transform: translate3d(0, 0, 0) scale(1); }
+  50% { transform: translate3d(60px, 40px, 0) scale(1.08); }
+}
+@keyframes orb-drift-b {
+  0%, 100% { transform: translate3d(0, 0, 0) scale(1); }
+  50% { transform: translate3d(-70px, -30px, 0) scale(1.1); }
+}
+@keyframes grid-drift {
+  from { background-position: 0 0, 0 0; }
+  to { background-position: 64px 64px, 64px 64px; }
+}
+@keyframes particle-rise {
+  0% { transform: translate3d(0, 0, 0); opacity: 0; }
+  15% { opacity: 0.9; }
+  85% { opacity: 0.9; }
+  100% { transform: translate3d(12px, -120px, 0); opacity: 0; }
+}
+@keyframes trail-sweep {
+  0% { transform: translateX(-30%) rotate(-12deg); opacity: 0; }
+  30% { opacity: 1; }
+  100% { transform: translateX(30%) rotate(-12deg); opacity: 0; }
+}
+@keyframes glow-breathe {
+  0%, 100% { opacity: 0.55; transform: scale(1); }
+  50% { opacity: 0.9; transform: scale(1.04); }
+}
+@keyframes float-soft {
+  0%, 100% { transform: translate3d(0, 0, 0); }
+  50% { transform: translate3d(0, -8px, 0); }
+}
+@keyframes rise-in {
+  from { opacity: 0; transform: translate3d(0, 18px, 0); }
+  to { opacity: 1; transform: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .anim-orb,
+  .anim-grid,
+  .anim-particle,
+  .anim-trail,
+  .anim-glow,
+  .anim-float {
+    animation: none !important;
+  }
+}
