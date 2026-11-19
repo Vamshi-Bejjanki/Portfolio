@@ -34,7 +34,9 @@ export default function Experience() {
 
               <p className="pt-1 text-[15px] font-semibold text-sky">{item.duration}</p>
 
-              <div className="glass rounded-3xl p-6 transition-[border-color,box-shadow,transform] duration-300 hover:-translate-y-1 hover:border-electric/50 hover:shadow-[0_16px_40px_rgba(0,163,255,0.12)] md:p-7">
+              <div
+                className={`glass rounded-3xl p-6 transition-[border-color,box-shadow,transform] duration-300 hover:-translate-y-1 hover:border-electric/50 hover:shadow-[0_16px_40px_rgba(0,163,255,0.12)] md:p-7 ${item.proof ? 'relative cursor-pointer' : ''}`}
+              >
                 <div className="flex flex-wrap items-start justify-between gap-4">
                   <div className="flex items-start gap-3">
                     <span className="mt-0.5 flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-primary/15 text-sky">
@@ -50,7 +52,8 @@ export default function Experience() {
                       href={item.proof}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1 rounded-lg text-[14px] font-semibold text-sky transition-colors duration-200 hover:text-text"
+                      aria-label={`View certificate for ${item.role} at ${item.organisation}`}
+                      className="inline-flex items-center gap-1 rounded-lg text-[14px] font-semibold text-sky transition-colors duration-200 hover:text-text after:absolute after:inset-0 after:rounded-3xl after:content-['']"
                     >
                       View certificate
                       <ArrowUpRight size={16} strokeWidth={1.75} aria-hidden="true" />
